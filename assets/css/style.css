@@ -266,10 +266,12 @@ body {
   font-size: 15px;
 }
 
+/* message received */
 .right .right-messages .message.received {
   background: white;
 }
 
+/* message sent */
 .right .right-messages .message.sent {
   align-self: flex-end;
   background: #D5F9BA;

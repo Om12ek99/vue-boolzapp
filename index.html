@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/tablet.css" media="screen and (max-width: 991px)">
     <link rel="stylesheet" href="assets/css/mobile.css" media="screen and (max-width: 540px)">
+    <!-- vue link -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Boolzapp</title>
 </head>
 <body>
@@ -49,7 +51,9 @@
             <!-- contatti -->
             <div class="contacts">
                 <div class="contact">
-                    <div class="contact-logo">
+
+
+                    <!-- <div class="contact-logo">
                         <img src="assets/img/avatar_1.jpg" alt="Avatar Michele">
                     </div>
                     <div class="contact-info">
@@ -58,90 +62,25 @@
                             <span class="time">16:15</span>
                         </h3>
                         <small>Lorem ipsum dolor sit amet</small>
-                    </div>
-                </div>
-                <div class="contact">
-                    <div class="contact-logo">
-                        <img src="assets/img/avatar_2.jpg" alt="Avatar Fabio">
-                    </div>
-                    <div class="contact-info">
-                        <h3>
-                            <span class="contact-name">Fabio</span>
-                            <span class="time">16:05</span>
-                        </h3>
-                        <small>Lorem ipsum dolor sit amet</small>
-                    </div>
-                </div>
-                <div class="contact">
-                    <div class="contact-logo">
-                        <img src="assets/img/avatar_3.jpg" alt="Avatar Samuele">
-                    </div>
-                    <div class="contact-info">
-                        <h3>
-                            <span class="contact-name">Samuele</span>
-                            <span class="time">16:03</span>
-                        </h3>
-                        <small>Lorem ipsum dolor sit amet</small>
-                    </div>
-                </div><div class="contact">
-                    <div class="contact-logo">
-                        <img src="assets/img/avatar_4.jpg" alt="Avatar Alessandro B.">
-                    </div>
-                    <div class="contact-info">
-                        <h3>
-                            <span class="contact-name">Alessandro B.</span>
-                            <span class="time">15:50</span>
-                        </h3>
-                        <small>Lorem ipsum dolor sit amet</small>
-                    </div>
-                </div>
-                <div class="contact">
-                    <div class="contact-logo">
-                        <img src="assets/img/avatar_5.jpg" alt="Avatar Alessandro L.">
-                    </div>
-                    <div class="contact-info">
-                        <h3>
-                            <span class="contact-name">Alessandro L.</span>
-                            <span class="time">15:45</span>
-                        </h3>
-                        <small>Lorem ipsum dolor sit amet</small>
-                    </div>
-                </div>
-                <div class="contact">
-                    <div class="contact-logo">
-                        <img src="assets/img/avatar_6.jpg" alt="Avatar Claudia">
-                    </div>
-                    <div class="contact-info">
-                        <h3>
-                            <span class="contact-name">Claudia</span>
-                            <span class="time">15:40</span>
-                        </h3>
-                        <small>Lorem ipsum dolor sit amet</small>
-                    </div>
-                </div>
-                <div class="contact">
-                    <div class="contact-logo">
-                        <img src="assets/img/avatar_7.jpg" alt="Avatar Federico">
-                    </div>
-                    <div class="contact-info">
-                        <h3>
-                            <span class="contact-name">Federico</span>
-                            <span class="time">15:22</span>
-                        </h3>
-                        <small>Lorem ipsum dolor sit amet</small>
-                    </div>
-                </div>
-                <div class="contact">
-                    <div class="contact-logo">
-                        <img src="assets/img/avatar_8.jpg" alt="Avatar Davide">
-                    </div>
-                    <div class="contact-info">
-                        <h3>
-                            <span class="contact-name">Davide</span>
-                            <span class="time">15:15</span>
-                        </h3>
-                        <small>Lorem ipsum dolor sit amet</small>
-                    </div>
+                    </div> -->
+
+                    <ul>
+                        <li v-for="(contactName, index) in contacts">
+                            <!-- logo del contatto -->
+                            <div class="contact-logo">
+                                <img :src="`./assets/img/avatar${contactName.avatar}.jpg`" alt="">
+                            </div>
+                            <!-- informazioni del contatto -->
+                            <div class="contact-info">
+                                <h3>
+                                    <span class="contact-name">{{ contactName.name }}</span> 
+                                    <span class="time">{{ contactName.messages[0].date }}</span>  
+                                </h3>                               
+                               <small>Lorem ipsum dolor sit amet</small>
+                            </div>                      
+                           
+                        </li>
+                      </ul>
                 </div>
             </div>
         </div>
@@ -210,6 +149,6 @@
         </div>
         <!-- /contenitore dx -->
     </div>
-
+<script src="./assets/data.js"></script>
 </body>
 </html>
