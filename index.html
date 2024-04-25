@@ -51,18 +51,21 @@
             <!-- contatti -->
             <div class="contacts">
                 <ul>
-                    <li v-for="(curContact,index) in contacts">
+                    <li 
+                    v-for="(curContact,index) in contacts"
+                    v-show="curContact.visible">
                 
                 <div class="contact" >
                     <div class="contact-logo">
-                        <img src="assets/img/avatar_1.jpg">
+                        <img 
+                        :src="`assets/img/avatar${curContact.avatar}.jpg`">
                     </div>
                     <div class="contact-info">
                         <h3>
                             <span class="contact-name"> {{curContact.name}} </span>
                             <span class="time">16:15</span>
                         </h3>
-                        <small>Lorem ipsum dolor sit amet</small>
+                        <small> last message: {{curContact.messages[curContact.messages.length - 1].message}} </small>
                     </div>
                 </div>
                     </li>
