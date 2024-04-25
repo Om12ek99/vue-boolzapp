@@ -50,38 +50,25 @@
 
             <!-- contatti -->
             <div class="contacts">
-                <div class="contact">
-
-
-                    <!-- <div class="contact-logo">
-                        <img src="assets/img/avatar_1.jpg" alt="Avatar Michele">
+                <ul>
+                    <li v-for="(curContact,index) in contacts">
+                
+                <div class="contact" >
+                    <div class="contact-logo">
+                        <img src="assets/img/avatar_1.jpg">
                     </div>
                     <div class="contact-info">
                         <h3>
-                            <span class="contact-name">Michele</span>
+                            <span class="contact-name"> {{curContact.name}} </span>
                             <span class="time">16:15</span>
                         </h3>
                         <small>Lorem ipsum dolor sit amet</small>
-                    </div> -->
-
-                    <ul>
-                        <li v-for="(contactName, index) in contacts">
-                            <!-- logo del contatto -->
-                            <div class="contact-logo">
-                                <img :src="`./assets/img/avatar${contactName.avatar}.jpg`" alt="">
-                            </div>
-                            <!-- informazioni del contatto -->
-                            <div class="contact-info">
-                                <h3>
-                                    <span class="contact-name">{{ contactName.name }}</span> 
-                                    <span class="time">{{ contactName.messages[0].date }}</span>  
-                                </h3>                               
-                               <small>Lorem ipsum dolor sit amet</small>
-                            </div>                      
-                           
-                        </li>
-                      </ul>
+                    </div>
                 </div>
+                    </li>
+                </ul>
+                
+            
             </div>
         </div>
         <!-- /contenitore sx -->

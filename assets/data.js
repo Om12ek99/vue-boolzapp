@@ -169,7 +169,9 @@ createApp({
             ]
         }
     },
+ methods: {
     
+ },   
     
 
 
