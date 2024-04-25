@@ -8,6 +8,7 @@ createApp({
                 {
                     name: 'Michele',
                     avatar: '_1',
+                    active: false,
                     visible: true,
                     messages: [
                         {
@@ -30,6 +31,7 @@ createApp({
                 {
                     name: 'Fabio',
                     avatar: '_2',
+                    active: true,
                     visible: true,
                     messages: [
                         {
@@ -52,6 +54,7 @@ createApp({
                 {
                     name: 'Samuele',
                     avatar: '_3',
+                    active: false,
                     visible: true,
                     messages: [
                         {
@@ -74,6 +77,7 @@ createApp({
                 {
                     name: 'Alessandro B.',
                     avatar: '_4',
+                    active: false,
                     visible: true,
                     messages: [
                         {
@@ -91,6 +95,7 @@ createApp({
                 {
                     name: 'Alessandro L.',
                     avatar: '_5',
+                    active: false,
                     visible: true,
                     messages: [
                         {
@@ -108,6 +113,7 @@ createApp({
                 {
                     name: 'Claudia',
                     avatar: '_6',
+                    active: false,
                     visible: true,
                     messages: [
                         {
@@ -130,6 +136,7 @@ createApp({
                 {
                     name: 'Federico',
                     avatar: '_7',
+                    active: false,
                     visible: true,
                     messages: [
                         {
@@ -147,6 +154,7 @@ createApp({
                 {
                     name: 'Davide',
                     avatar: '_8',
+                    active: false,
                     visible: true,
                     messages: [
                         {

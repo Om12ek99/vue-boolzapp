@@ -49,8 +49,11 @@
             <!-- /barra ricerca -->
 
             <!-- contatti -->
+
             <div class="contacts">
+                <!-- lista contatti che si aggiorna con i contatti inseriti nell'array contacts -->
                 <ul>
+                    <!-- usato il comando v-show per mostrare solo i contatti con la proprietà visible settata a true -->
                     <li 
                     v-for="(curContact,index) in contacts"
                     v-show="curContact.visible">
@@ -76,28 +79,44 @@
         </div>
         <!-- /contenitore sx -->
         <!-- contenitore dx -->
-        <div class="right">
+        <div class="right"
+        v-for="(curContact,index) in contacts"
+        v-show="curContact.active">
             <div class="header-right">
                 <!-- logo -->
-                <div class="header-right-logo">
-                    <img src="assets/img/avatar_1.jpg" alt="">
-                    <h3><span id="header-right-contact-name">Michele</span> <br>
+                <div class="header-right-logo" >
+                    <!-- immagine del contatto corrente -->
+                    <img :src="`assets/img/avatar${curContact.avatar}.jpg`">
+                    <!-- nome del contatto corrente -->
+                    <h3><span id="header-right-contact-name"> {{curContact.name}} </span> <br>
+                        <!-- ultimo accesso contatto corrente -->
                         <small class="time">Ultimo accesso oggi alle 16:26</small>
                     </h3>
                 </div>
+                <!-- non changable -->
                 <div class="header-right-icons">
                     <i class="fas fa-search"></i>
                     <i class="fas fa-paperclip"></i>
                     <i class="fas fa-ellipsis-v"></i>
                 </div>
             </div>
+            <!-- spazio messaggi -->
+            <!-- contenitore dei messaggi -->
             <div class="right-messages-container">
-                <div class="right-messages">
-                    <div class="message sent">
+
+                <div class="right-messages"
+                >
+                    <!-- messaggi inviati -->
+                    <div class="message" 
+                    v-for="(curMessage, index) in curContact.messages"
+                    :class="curMessage.status === 'received'? 'received' : 'sent'">
                         <div class="message-inner">
+                            <!-- testo messaggio -->
                             <span class="message-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eos blanditiis architecto expedita aspernatur quasi, et nobis aut officiis soluta voluptates nesciunt voluptate ipsa fuga rerum doloribus, unde laboriosam doloremque?
+                                {{curMessage.message}}
                             </span>
+
+                            <!-- opzioni messaggio -->
                             <div class="message-options">
                                 <i class="fa fa-chevron-down"></i>
                                 <div class="message-options-panel">
@@ -108,7 +127,9 @@
                         </div>
                         <span class="message-time">16:13</span>
                     </div>
-                    <div class="message received">
+
+                    <!-- messaggi ricevuti -->
+                    <!-- <div class="message received">
                         <div class="message-inner">
                             <span class="message-text">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eos blanditiis architecto expedita
@@ -124,7 +145,7 @@
                             </div>
                         </div>
                         <span class="message-time">16:15</span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="right-footer">
