@@ -133,11 +133,18 @@
 
                 </div>
             </div>
+
+            <!-- footer -->
             <div class="right-footer">
+                <!-- icone -->
                 <div class="right-footer-icon">
                     <i class="far fa-smile"></i>
                 </div>
-                <input class="new-message-inputs" placeholder="Scrivi un messaggio">
+
+                <!-- inserimento messaggio -->
+                <input class="new-message-inputs" placeholder="Scrivi un messaggio" @keyup.enter="addNewMessage(curContact)">
+
+                <!-- icone -->
                 <div class="right-footer-icon">
                     <i class="fa fa-microphone" aria-hidden="true"></i>
                 </div>

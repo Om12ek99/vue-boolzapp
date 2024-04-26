@@ -190,6 +190,20 @@ createApp({
                 contact.active = "";
             }
         });
+    },
+    addNewMessage(curContact) {
+        // Ottieni il testo dall'input
+        const newMessageText = document.querySelector('.new-message-inputs').value;
+
+        // Aggiungi il nuovo messaggio all'array di messaggi del contatto corrente
+        curContact.messages.push({
+            date: new Date().toLocaleString(),
+            message: newMessageText,
+            status: 'sent'
+        });
+
+        // Pulisci la casella di input dopo l'aggiunta del messaggio
+        document.querySelector('.new-message-inputs').value = '';
     }
 
  },   
