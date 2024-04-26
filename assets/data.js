@@ -204,9 +204,31 @@ createApp({
 
         // Pulisci la casella di input dopo l'aggiunta del messaggio
         document.querySelector('.new-message-inputs').value = '';
+    },
+        addNewMessage(curContact) {
+            const newMessageText = document.querySelector('.new-message-inputs').value;
+    
+            // Aggiungi il nuovo messaggio inviato dall'utente
+            curContact.messages.push({
+                date: new Date().toLocaleString(),
+                message: newMessageText,
+                status: 'sent'
+            });
+    
+            // Pulisci la casella di input
+            document.querySelector('.new-message-inputs').value = '';
+    
+            // Aggiungi un messaggio di risposta ("ok") dopo 1 secondo
+            setTimeout(() => {
+                curContact.messages.push({
+                    date: new Date().toLocaleString(),
+                    message: 'Ok',
+                    status: 'received' // Imposta lo stato come "received" per il messaggio di risposta
+                });
+            }, 1000);
+        },
     }
-
- },   
+    
     
 
 
