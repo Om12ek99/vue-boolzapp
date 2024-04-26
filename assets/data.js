@@ -228,7 +228,12 @@ createApp({
                 });
             }, 1000);
         },
-    }
+        filteredContacts() {
+            // Filtra i contatti in base al testo di ricerca
+            return this.contacts.filter(contact =>
+              contact.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+            );
+    }}
     
     
 
