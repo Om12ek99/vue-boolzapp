@@ -5,6 +5,7 @@ createApp({
     data() {
         return {
             count: 0,
+            searchQuery: '',
             contacts: [
                 {
                     name: 'Michele',

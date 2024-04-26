@@ -275,7 +275,7 @@ body {
 .right .right-messages .message.sent {
   align-self: flex-end;
   background: #D5F9BA;
-  height: fit-content;
+  
 }
 
 .right .right-messages .message .message-inner {
