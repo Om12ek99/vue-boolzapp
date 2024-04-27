@@ -5,7 +5,7 @@ createApp({
     data() {
         return {
             count: 0,
-            searchQuery: '',
+            searchQuery: '', 
             contacts: [
                 {
                     name: 'Michele',
@@ -229,15 +229,17 @@ createApp({
             }, 1000);
         },
         filteredContacts() {
-            // Filtra i contatti in base al testo di ricerca
+            // Filtra i contatti in base alla stringa di ricerca
             return this.contacts.filter(contact =>
-              contact.name.toLowerCase().includes(this.searchQuery.toLowerCase())
+                contact.name.toLowerCase().includes(this.searchQuery.toLowerCase())
             );
-    }}
+        }
+    }
+    }
     
     
 
 
 
-}).mount("#app");
+).mount("#app");
 
