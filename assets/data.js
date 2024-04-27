@@ -237,9 +237,25 @@ createApp({
                         curContact.visible = false;
                       }});
         },
-        
+        getLastMessage(contact) {
+            const lastMessage = contact.messages[contact.messages.length - 1];
+            if (lastMessage) {
+                return lastMessage.message;
+            } else {
+                return "Nessun messaggio";
+            }
+        },
+        getLastMessageTime(contact) {
+            const lastMessage = contact.messages[contact.messages.length - 1];
+            if (lastMessage) {
+                return lastMessage.date;
+            } else {
+                return "";
+            }
+        }
+    },
     }
-    }
+    
     
     
 
