@@ -229,11 +229,15 @@ createApp({
             }, 1000);
         },
         filteredContacts() {
-            // Filtra i contatti in base alla stringa di ricerca
-            return this.contacts.filter(contact =>
-                contact.name.toLowerCase().includes(this.searchQuery.toLowerCase())
-            );
-        }
+            this.contacts.forEach((curContact) => {
+                const name = curContact.name.toLowerCase();
+                if (name.includes(this.searchQuery.toLowerCase())){
+                        curContact.visible = true;
+                      } else {
+                        curContact.visible = false;
+                      }});
+        },
+        
     }
     }
     
