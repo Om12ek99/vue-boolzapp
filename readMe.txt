@@ -22,9 +22,9 @@ Milestone 4
 contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo
 “mar” rimangono solo Marco e Martina)
 
-BONUS:
+BONUS: Milestone 5
 [x] Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti
 [x] Cancella messaggio: cliccando sul messaggio appare un menu a tendina che
 permette di cancellare il messaggio selezionato
 
- 
+ s
