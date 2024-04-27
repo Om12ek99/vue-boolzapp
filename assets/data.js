@@ -256,6 +256,7 @@ createApp({
         deleteMessage(contact, messageIndex) {
             // Rimuovi il messaggio dall'array di messaggi del contatto corrente
             contact.messages.splice(messageIndex, 1);
+            
         }
     },
     }
